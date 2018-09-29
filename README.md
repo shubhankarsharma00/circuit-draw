@@ -3,7 +3,6 @@ This is a small project related to building circuits using openGL. There are pla
 ![alt text](https://github.com/shubhankarsharma00/circuit-draw/blob/master/img.png)
 
 ##Requirements
-*pyopenGl* - ''' $ pip install PyOpenGL PyOpenGL_accelerate '''
+*pyopenGl* -' $ pip install PyOpenGL PyOpenGL_accelerate '
 
 ##Instructions
-
