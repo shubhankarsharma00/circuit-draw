@@ -6,7 +6,7 @@ This is a small project related to building circuits using openGL. There are pla
 *pyopenGl* - ` $ pip install PyOpenGL PyOpenGL_accelerate `
 
 ## Instructions:
--**AND Gate**:
+- **AND Gate**:
 	- Press `0` and left click anywhere on the grid to show an and gate.
 	- Click the right or middle button of mouse to remove the and gate.
 
