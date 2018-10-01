@@ -24,7 +24,7 @@ def draw_Wire_vertical():
         glEnd()
     # glFlush()
 
-
+#draw horizontal wires
 def draw_Wire_horizontal():
     for t in h_wire:
         # glClear(GL_COLOR_BUFFER_BIT)
