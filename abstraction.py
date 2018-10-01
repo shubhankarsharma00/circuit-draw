@@ -10,7 +10,7 @@ v_wire=[]
 h_wire=[]
 
 
-
+#Draws vertical wire
 
 def draw_Wire_vertical():
     for t in v_wire:
