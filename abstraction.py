@@ -11,6 +11,7 @@ and_gates=[]
 v_wire_down=[]
 v_wire_up=[]
 h_wire=[]
+<<<<<<< HEAD
 edges = (
     (0,1),
     (1,2),
@@ -72,6 +73,11 @@ def bfs((x,y)):
                     visited[i]=True
                     bfs(i)
             
+=======
+
+
+#Draws vertical wires
+>>>>>>> 6561deec8a34f69199e311d04867888535ce65fe
 
 def draw_Wire_vertical():
     for t in v_wire_up:
@@ -112,6 +118,10 @@ def draw_Wire_vertical():
         glEnd()
     # glFlush()
 
+<<<<<<< HEAD
+=======
+#draw horizontal wires
+>>>>>>> 6561deec8a34f69199e311d04867888535ce65fe
 def draw_Wire_horizontal():
     for t in h_wire:
         # print "hey"
@@ -361,3 +371,16 @@ def mouse(button, state, x, y):
                 v_wire_down.remove((x,y))
             # print "*"         
             glutIdleFunc(spinDisplay)
+<<<<<<< HEAD
+=======
+
+
+
+
+edges = (
+    (0,1),
+    (1,2),
+    (2,3),
+    (0,3)
+    )
+>>>>>>> 6561deec8a34f69199e311d04867888535ce65fe
