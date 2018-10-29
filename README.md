@@ -7,14 +7,20 @@ This is a small project related to building circuits using openGL. There are pla
 
 ## Instructions:
 - **AND Gate**:
-	- Press `0` and left click anywhere on the grid to show an and gate.
+	- Press `a` and left click anywhere on the grid to show an and gate.
 	- Click the right or middle button of mouse to remove the and gate.
 
 - **Horizontal Wire**:
-	- Press `1` and left click anywhere on the grid to show an Horizontal Wire.
+	- Press `h` and left click anywhere on the grid to show an Horizontal Wire.
 	- Click the right or middle button of mouse to remove the Horizontal Wire.
 
 
 - **Vertical Wire**:
-	- Press `2` and left click anywhere on the grid to show an Vertical Wire.
-	- Click the right or middle button of mouse to remove the Vertical Wire.
+	- Press `v` and left click anywhere on the grid to show a downward Vertical Wire.
+	- Click the right or middle button of mouse to remove the downward Vertical Wire.
+	- Press `V` and left click anywhere on the grid to show a upward Vertical Wire.
+	- Click the right or middle button of mouse to remove the upward Vertical Wire.
+	 
+- **Switching a wire on/off**:
+	- Press `g` and left click anywhere on the grid to send digital 1 through the wire.
+	- Press `r` and left click anywhere on the grid to send digital 0 through the wire.

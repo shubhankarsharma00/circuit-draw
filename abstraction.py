@@ -11,7 +11,7 @@ and_gates=[]
 v_wire_down=[]
 v_wire_up=[]
 h_wire=[]
-<<<<<<< HEAD
+
 edges = (
     (0,1),
     (1,2),
@@ -29,10 +29,14 @@ for x in xrange(display_height):
         visited[(x,y)]=False
 
 def swi_open((x,y)):
+    if(off.count((x,y))>0):
+        off.remove((x,y))
     if(on.count((x,y))==0):
         on.append((x,y))
 
 def swi_off((x,y)):
+    if(on.count((x,y))>0):
+        on.remove((x,y))
     if(off.count((x,y))==0):
         off.append((x,y))
 
@@ -73,11 +77,10 @@ def bfs((x,y)):
                     visited[i]=True
                     bfs(i)
             
-=======
+
 
 
 #Draws vertical wires
->>>>>>> 6561deec8a34f69199e311d04867888535ce65fe
 
 def draw_Wire_vertical():
     for t in v_wire_up:
@@ -118,10 +121,6 @@ def draw_Wire_vertical():
         glEnd()
     # glFlush()
 
-<<<<<<< HEAD
-=======
-#draw horizontal wires
->>>>>>> 6561deec8a34f69199e311d04867888535ce65fe
 def draw_Wire_horizontal():
     for t in h_wire:
         # print "hey"
@@ -190,11 +189,13 @@ def drawAnd():
         glVertex2fv((x+20,display_width-((y+80)+20)))            
         if(on.count((x-40,y))>0 and on.count((x-40,y+80))>0):
             glColor3fv((0,1,0))
+            swi_open((x+120,y+40))
             swi_open((x+80,y+40))
         elif(off.count((x-40,y))>0 or off.count((x-40,y+80))>0):
             glColor3fv((1,0,0))
             if on.count((x+80,y+40)):
                 on.remove((x+80,y+40))
+            swi_off((x+120,y+40))
             swi_off((x+80,y+40))
 
         else:                
@@ -371,8 +372,7 @@ def mouse(button, state, x, y):
                 v_wire_down.remove((x,y))
             # print "*"         
             glutIdleFunc(spinDisplay)
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -383,4 +383,3 @@ edges = (
     (2,3),
     (0,3)
     )
->>>>>>> 6561deec8a34f69199e311d04867888535ce65fe
