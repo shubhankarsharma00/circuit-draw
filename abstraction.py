@@ -7,16 +7,15 @@ from OpenGL.GLU import *
 from display_settings import *
 from andgate import *
 from verticalwire import *
-
-
+from notgate import *
 
 def setflag(x):
-    for i in range(4):
+    for i in range(5):
         flag_arr[i]=0
     flag_arr[x]=1
 
 def setflagbfs(x):
-    for i in range(4):
+    for i in range(5):
         flag_arr[i]=0
     flag_bfs[x]=1
 
@@ -143,6 +142,7 @@ def display():
     grid()
     # glClear(GL_COLOR_BUFFER_BIT)
     drawAnd()
+    drawNot()
     draw_Wire_vertical()
     draw_Wire_horizontal()
         # glFlush()# print i,j
@@ -171,6 +171,9 @@ def keyboard(key, x, y):
     elif key == 'v':
         setflag(3)
         glutPostRedisplay()    
+    elif key == 'n':
+        setflag(4)
+        glutPostRedisplay()  
     elif key == 'g':
         setflagbfs(0)
         glutPostRedisplay()    
@@ -206,6 +209,8 @@ def mouse(button, state, x, y):
                 # print sorted(on),sorted(off)
             elif flag_arr[0]==1:
                 and_gates.append((x,y))
+            elif flag_arr[4]==1:
+                not_gates.append((x,y))
             elif flag_arr[1]==1:
                 v_wire_down.append((x,y))
                 g[(x,y)].append((x-40,y-40))
@@ -231,6 +236,8 @@ def mouse(button, state, x, y):
         if(state == GLUT_DOWN):
             if and_gates.count((x,y))>0:
                 and_gates.remove((x,y))
+            if not_gates.count((x,y))>0:
+                not_gates.remove((x,y))
             if h_wire.count((x,y))>0:    
                 h_wire.remove((x,y))
             if on.count((x,y))>0:

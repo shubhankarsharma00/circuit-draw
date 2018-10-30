@@ -9,7 +9,7 @@ on = abstraction.on
 off = abstraction.off
 
 def drawAnd():
-#Box of gate
+#Semicircle of and gate
     for t in abstraction.and_gates:
         # glClear(GL_COLOR_BUFFER_BIT)
         glBegin(GL_POLYGON)
@@ -20,7 +20,7 @@ def drawAnd():
             y = 20*math.sin(angle)
             glVertex2d(x+t[0]+25,display_width-(y+t[1]+20))
         glEnd()
-#Semicircle of and gate
+#Box of gate
         x=t[0]
         y=t[1]
         glBegin(GL_QUADS)
