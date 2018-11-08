@@ -54,11 +54,11 @@ def drawNot():
 #The Output
         if(off.count((x-40,y))>0):
             glColor3fv((0,1,0))
-            abstraction.swi_open((x+120,y+40))
-            abstraction.swi_open((x+80,y+40))
+            abstraction.swi_open((x+40,y))
+            abstraction.swi_open((x+80,y))
         elif(on.count((x-40,y))>0):
             glColor3fv((1,0,0))
-            abstraction.swi_off((x+120,y))
+            abstraction.swi_off((x+40,y))
             abstraction.swi_off((x+80,y))
         else:                
             glColor3fv((1,1,1))
