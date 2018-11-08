@@ -7,8 +7,12 @@ This is a small project related to building circuits using openGL. There are pla
 
 ## Instructions:
 - **AND Gate**:
-	- Press `a` and left click anywhere on the grid to show an and gate.
-	- Click the right or middle button of mouse to remove the and gate.
+	- Press `a` and left click anywhere on the grid to show an AND gate.
+	- Click the right or middle button of mouse to remove the AND gate.
+
+- **NOT Gate**:
+	- Press `n` and left click anywhere on the grid to show an NOT gate.
+	- Click the right or middle button of mouse to remove the NOT gate.
 
 - **Horizontal Wire**:
 	- Press `h` and left click anywhere on the grid to show an Horizontal Wire.
